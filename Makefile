@@ -1,7 +1,7 @@
 .PHONY: up, format, lint, test
 
 up:
-	poetry run python3 src/main.py
+	poetry run uvicorn src.main:app --reload
 
 format:
 	poetry run ruff check . --fix --exit-non-zero-on-fix
