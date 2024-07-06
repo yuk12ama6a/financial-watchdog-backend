@@ -1,4 +1,3 @@
-from src.sample import Sample
+from fastapi import FastAPI
 
-if __name__ == "__main__":
-    print(Sample(name="world").say_hello())
+app = FastAPI()
