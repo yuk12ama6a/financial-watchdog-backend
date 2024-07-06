@@ -2,5 +2,4 @@
 show_missing = true
 omit =
     __init__.py
-    src/responses/*
     src/main.py
