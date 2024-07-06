@@ -1,0 +1,40 @@
+{
+  "name": "Financial watchdog backend dev container",
+  "dockerComposeFile": "../docker-compose.devcontainer.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.lineNumbers": "on",
+        "editor.renderControlCharacters": true,
+        "editor.rulers": [
+          80
+        ],
+        "editor.suggestSelection": "first",
+        "editor.wordWrap": "on",
+        "files.insertFinalNewline": true,
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "editor.tabSize": 2
+        },
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+        }
+      },
+      "extensions": [
+        "charliermarsh.ruff",
+        "esbenp.prettier-vscode",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "ms-python.python",
+        "oderwat.indent-rainbow",
+        "visualstudioexptteam.vscodeintellicode"
+      ]
+    }
+  }
+}
