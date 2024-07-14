@@ -1,4 +1,4 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -14,3 +14,5 @@ class Settings(BaseSettings):
     MAJOR_VERSION: int = 0
     MINOR_VERSION: int = 0
     PATCH_VERSION: int = 0
+
+    model_config = SettingsConfigDict(env_file="./env/.env", env_file_encoding="utf-8")
