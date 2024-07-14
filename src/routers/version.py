@@ -14,6 +14,4 @@ def get_version() -> VersionResponse:
 
     settings = Settings()
 
-    return VersionResponse(
-        version=f"{settings.MAJOR_VERSION}.{settings.MINOR_VERSION}.{settings.PATCH_VERSION}"
-    )
+    return VersionResponse(version=settings.VERSION)
