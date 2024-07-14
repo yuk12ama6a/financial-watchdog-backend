@@ -10,10 +10,10 @@ client = TestClient(app=app)
 def test_get_version(mocker: MockFixture) -> None:
     mocker.patch(
         "src.routers.version.Settings",
-        return_value=Settings(MAJOR_VERSION=1, MINOR_VERSION=0, PATCH_VERSION=0),
+        return_value=Settings(VERSION="1.0.0-test"),
     )
 
     response = client.get(url="/api/version")
 
     assert response.status_code == 200
-    assert response.json() == {"version": "1.0.0"}
+    assert response.json() == {"version": "1.0.0-test"}

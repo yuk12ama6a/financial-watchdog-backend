@@ -11,8 +11,6 @@ class Settings(BaseSettings):
         - PATCH_VERSION (int): パッチバージョン
     """
 
-    MAJOR_VERSION: int = 0
-    MINOR_VERSION: int = 0
-    PATCH_VERSION: int = 0
+    VERSION: str = "0.0.0"
 
     model_config = SettingsConfigDict(env_file="./env/.env", env_file_encoding="utf-8")
