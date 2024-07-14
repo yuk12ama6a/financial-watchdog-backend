@@ -6,9 +6,7 @@ class Settings(BaseSettings):
     アプリ設定
 
     Attributes
-        - MAJOR_VERSION (int): メジャーバージョン
-        - MINOR_VERSION (int): マイナーバージョン
-        - PATCH_VERSION (int): パッチバージョン
+        - VERSION (str): バージョン
     """
 
     VERSION: str = "0.0.0"
