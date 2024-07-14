@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.config.settings import Settings
+from src.config import Settings
 from src.responses.version import VersionResponse
 
 router = APIRouter()

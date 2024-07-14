@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 from pytest_mock import MockFixture
 
-from src.config.settings import Settings
+from src.config import Settings
 from src.main import app
 
 client = TestClient(app=app)
